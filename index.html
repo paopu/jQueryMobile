@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewpoint" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="themes/myTheme.css"/>  <!-- Custome theme is from ThemeRoller -->
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css"/>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile Assignment</title>
+</head>
+
+<body>
+
+<div data-role="page" id="page1" data-theme="c">
+	<div data-role="header" data-position="fixed">
+		<h3>Home</h3>
+        <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear">Options</a>
+	</div>
+    
+	<div data-role="navbar">
+		<ul>
+            <li><a href="#page1" data-icon="home" class="ui-btn-active">Home</a></li>
+            <li><a href="#page2" data-icon="grid" data-transition="flow">Contact</a></li>
+        </ul>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+        <h1>Hello!</h1>
+        <p>Welcome to my first page</p> 
+        <div data-role="collapsible">
+            <h2>Get To Know Me</h2>
+            <p>Senior at Missouri State University</p>
+            <p>From Northern Virginia</p>
+            <p>Possible Game Designer in the future....</p>
+            <p>Video Game Fanatic</p>
+        </div>
+        <div data-role="collapsible">
+            <h2>Education</h2>
+            <p>Major: Computer Information Systems</p>
+            <p>Minor: Web Applications Development</p>
+        </div>
+        
+	</div>
+	
+	<div data-role="footer">
+		<h3>&copy; Abbey Saintvalliere 2018</h3>
+	</div>	
+</div>
+    
+<div data-role="page2" id="page2" data-theme="c">
+   <div data-role="header">
+    <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-rel="back">Back</a>
+        <h3>Contact</h3>
+    </div>
+    
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#page1" data-icon="home" data-transition="flow">Home</a></li>
+            <li><a href="#page2" data-icon="grid" class="ui-btn-active">Contact</a></li>
+        </ul>
+    </div>
+    
+    <div data-role="main" class="ui-content">
+        <h1>Talk To Me!</h1>
+        <p>Get in touch with me by adding a little message.</p>
+        <p>Tell me about my app. Do you like it? Needs more work? Let me know below!</p>
+        
+         <form>
+            <textarea></textarea>
+            <input type="range" min="0" max="10" />
+            <input type="submit" value="Rate my app!" />
+        </form>
+        
+    </div>
+    
+    <div data-role="footer">
+        <h3>&copy; Abbey Saintvalliere 2018</h3>
+    </div>    
+</div>
+    
+        <!-- CSS Styling -->
+ <style>
+    
+     h1 {
+         font-family: serif;
+         text-align: center;
+         color: #d26589;
+     }
+     
+     p {
+         font-family: cursive;
+         font-style: italic;
+     }
+    
+    </style>   
+    
+        <!-- JS Scripting -->
+<!-- orientationchange between "portrait" and "landscape" view -->
+<!-- added an alert when the user goes into "landscape" and "portrait" view for fun -->
+    
+    <script>
+        $(document).live("orientationchange", function(){
+            if (window.orientation == 0) {
+              alert("You are in portrait mode!");
+          }
+            else{
+                alert("You are in landscape mode!");
+            }
+        });
+        
+    </script>
+    
+</body>
+</html>
